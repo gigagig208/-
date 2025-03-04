@@ -1,0 +1,9 @@
+SELECT 
+    region, 
+    COUNT(DISTINCT attraction_type) AS attraction_type_count
+FROM 
+    your_table_name
+GROUP BY 
+    region
+ORDER BY 
+    attraction_type_count DESC;
