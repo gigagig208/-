@@ -1,0 +1,12 @@
+SELECT 
+    region, 
+    COUNT(*) AS query_count
+FROM 
+    your_table_name
+WHERE 
+    sentiment IN ('хороший', 'плохой')  -- Фильтр по тональности
+GROUP BY 
+    region
+ORDER BY 
+    query_count DESC
+LIMIT 10;
